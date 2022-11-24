@@ -1,4 +1,4 @@
-.phony: all tests install clean
+.phony: check install
 		 
 biblio:	./src/biblio.c ./src/main.c
 		gcc -o biblio $^
@@ -6,8 +6,5 @@ biblio:	./src/biblio.c ./src/main.c
 install:
 		cp ./biblio ~/bin/biblio
 
-test:
+check:
 		cd tests && ./run
-		
-clean:
-		
