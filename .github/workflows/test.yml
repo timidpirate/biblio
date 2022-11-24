@@ -16,5 +16,5 @@ jobs:
       
     - name: Test1
       run: |
-        gcc ../src/biblio.c ./trim.c
+        gcc ./src/biblio.c ./tests/trim.c
         ./a.out
