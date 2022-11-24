@@ -38,5 +38,5 @@ int main()
 		{ printf("Test failed! (expected 'text4' but was '%s' read)\n", a); return 1; }
 
 	printf("Test passed.\n");
-	return 0;
+	return 1;
 }
