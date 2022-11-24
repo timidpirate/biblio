@@ -16,7 +16,10 @@ jobs:
       
     - name: Test1
       run: |
+        cd tests
         tests=$(find . -name "*.c")
-        echo $tests
-        gcc ./src/biblio.c ./tests/trim.c
-        ./a.out
+        for test in $tests; do
+            gcc ../src/biblio.c $test
+            ./a.out
+            rm -rf a.out
+        done;
