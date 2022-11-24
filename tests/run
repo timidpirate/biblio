@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#set -e
+
+clear;
+
+tests=$(find . -name "*.c")
+
+for test in $tests; do
+	echo -n "Running $test... "
+	gcc ../src/biblio.c $test
+	./a.out
+	rm -rf a.out
+done;
