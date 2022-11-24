@@ -16,5 +16,7 @@ jobs:
       
     - name: Test1
       run: |
+        tests=$(find . -name "*.c")
+        echo $tests
         gcc ./src/biblio.c ./tests/trim.c
         ./a.out
